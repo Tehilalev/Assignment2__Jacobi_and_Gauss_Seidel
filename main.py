@@ -184,10 +184,13 @@ def main():
     if not is_dominant(a, n):
         print("No Dominant diagonal Was Found.")
     else:
-        print(colored("Yakobi_Method:", "red", attrs=['bold']))
-        yakobi_method(a, n, b)
-        print(colored("Gauss_Seidel_Method:", "red", attrs=['bold']))
-        print(gauss_seidel_method(a, n, b))
+        choice = input("chose one of the following options: 1 - Yakobi   2 - Gauss Seidel ")
+        if choice == "1":
+            print(colored("Yakobi_Method:", "red", attrs=['bold']))
+            yakobi_method(a, n, b)
+        else:
+            print(colored("Gauss_Seidel_Method:", "red", attrs=['bold']))
+            print(gauss_seidel_method(a, n, b))
 
 
 main()
